@@ -1,9 +1,6 @@
 package jpashop_silsub.jpashop_silsub.jpabook;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class OrderItem {
@@ -11,8 +8,13 @@ public class OrderItem {
     @Column(name = "order_item_id")
     private Long id;
 
-    @Column(name = "order_id")
-    private Long oId;
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order order;
+
+    @ManyToOne
+    @JoinColumn(name = "item_id")
+    private Item item;
 
     @Column(name = "item_id")
     private Long iId;
