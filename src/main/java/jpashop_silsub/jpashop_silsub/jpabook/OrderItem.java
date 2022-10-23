@@ -1,8 +1,12 @@
 package jpashop_silsub.jpashop_silsub.jpabook;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
+@Getter @Setter
 public class OrderItem {
     @Id @GeneratedValue
     @Column(name = "order_item_id")

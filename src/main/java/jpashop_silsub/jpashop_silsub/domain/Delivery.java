@@ -23,4 +23,6 @@ public class Delivery {
     @Enumerated(value = EnumType.STRING)
     private DeliveryStatus status;
 
+
+
 }
